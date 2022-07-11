@@ -27,8 +27,8 @@ int _printf(const char *format, ...)
 			trav++;
 			pfunc = get_print(*trav);
 			count += (pfunc)
-				?pfunc(args)
-				:_printf("%%%c", *trav);
+				? pfunc(args)
+				: _printf("%%%c", *trav);
 		}
 		else
 			count += _putchar(*trav);
