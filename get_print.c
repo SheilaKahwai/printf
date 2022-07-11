@@ -17,6 +17,8 @@ fmt specs[] = {
 {'c', print_char},
 {'s', print_string},
 {'%', print_percent},
+{'i', print_int},
+{'d', print_int}
 };
 
 int ops = 5;
