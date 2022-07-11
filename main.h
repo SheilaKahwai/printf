@@ -5,6 +5,12 @@
 #include<string.h>
 #include<unistd.h>
 
+/**
+ * struct format - struct to choose the right function depending
+ * on the format specifier
+ * @sp: format specifier
+ * @f: pointer to the corresponding printing function
+ */
 typedef struct format
 {
 char sp;
