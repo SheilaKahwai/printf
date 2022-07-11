@@ -26,12 +26,13 @@ int _printf(const char *format, ...)
 		{
 			trav++;
 			pfunc = get_print(*trav);
-			count += pfunc(args);
+			count += (pfunc)
+				?pfunc(args)
+				:_printf("%%%c", *trav);
 		}
 		else
 			count += _putchar(*trav);
 	}
-	_putchar(-1);
 	va_end(args);
 	return (count);
 }
