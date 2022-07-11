@@ -33,3 +33,13 @@ int print_string(va_list args)
 	return (i);
 }
 
+/**
+ * print_percent - prints a percent sign
+ * @args: character to print
+ * Return: 1
+ */
+int print_percent(va_list args)
+{
+	_putchar('%');
+	return (1);
+}
