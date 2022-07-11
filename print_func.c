@@ -38,7 +38,7 @@ int print_string(va_list args)
  * @args: character to print
  * Return: 1
  */
-int print_percent(va_list args)
+int print_percent(__attribute__((unused))va_list args)
 {
 	_putchar('%');
 	return (1);
