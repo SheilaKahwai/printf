@@ -25,6 +25,11 @@ int _printf(const char *format, ...)
 		if (*trav == '%')
 		{
 			trav++;
+			if (*trav == '%')
+			{
+				count += _putchar('%');
+				continue;
+			}
 			pfunc = get_print(*trav);
 			count += pfunc(args);
 		}
