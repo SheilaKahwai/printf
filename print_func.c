@@ -44,6 +44,22 @@ int print_percent(__attribute__((unused))va_list args)
 	return (1);
 }
 
+/**
+ * print_int - prints an integer
+ * @args: integer to print
+ * Return: no. of characters printed
+ */
+int print_int(va_list args)
+{
+	int x;
+	int count;
+
+	x = va_arg(args, int);
+	count = print_number(x);
+	return (count);
+}
+
+
 
 /**
  * print_number - prints a number
@@ -70,20 +86,5 @@ int print_number(int x)
 	}
 	count += _putchar ((n % 10) + '0');
 
-	return (count);
-}
-
-/**
- * print_int- prints an integer
- * @args: integers to print
- * Return: number of characters printed
- */
-int print_int(va_list args)
-{
-	int x;
-	int count;
-
-	x = va_arg(args, int);
-	count = print_number(x);
 	return (count);
 }
