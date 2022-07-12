@@ -18,10 +18,11 @@ fmt specs[] = {
 {'s', print_string},
 {'%', print_percent},
 {'i', print_int},
-{'d', print_int}
+{'d', print_int},
+{'b', print_binary}
 };
 
-int ops = 5;
+int ops = 6;
 int i;
 
 for (i = 0; i < ops ; i++)

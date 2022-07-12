@@ -27,5 +27,7 @@ int print_char(va_list args);
 int print_int(va_list args);
 void print_number(int n);
 int count_digit(int x);
+int print_binary(va_list args);
+char *DectoBase(unsigned int n, int base);
 
 #endif
