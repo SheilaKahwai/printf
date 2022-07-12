@@ -12,7 +12,7 @@ char *DectoBase(unsigned int n, int base)
 	static char buff[50];
 	char *ptr;
 
-	static const char Rep[] = "0123456789ABDEF";
+	static char Rep[] = "0123456789ABDEF";
 
 	ptr = &buff[49];
 	*ptr = '\0';
