@@ -12,7 +12,7 @@ int print_binary(va_list args)
 	char *str;
 
 	x = va_arg(args, unsigned int);
-	str = DectoBase(x, 2);
+	str = DectoBase(x, 2, 0);
 
 	return (_puts(str));
 }
@@ -46,7 +46,6 @@ int print_hexLwr(va_list args)
 {
 	unsigned int x;
 	char *str;
-	
 	int count = 0;
 
 	x = va_arg(args, unsigned int);
