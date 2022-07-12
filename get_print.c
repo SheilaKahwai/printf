@@ -19,10 +19,14 @@ fmt specs[] = {
 {'%', print_percent},
 {'i', print_int},
 {'d', print_int},
-{'b', print_binary}
+{'b', print_binary},
+{'o', print_octal},
+{'X', print_hexUpr},
+{'x', print_hexLwr},
+{'u', print_unsint}
 };
 
-int ops = 6;
+int ops = 10;
 int i;
 
 for (i = 0; i < ops ; i++)

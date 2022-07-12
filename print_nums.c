@@ -20,6 +20,22 @@ int print_int(va_list args)
 }
 
 /**
+ * print_unsint - prints an unsigned int
+ * @args: integer to print
+ * Return: no. of characters printed
+ */
+int print_unsint(va_list args)
+{
+	unsigned int x;
+	char *str;
+
+	x = va_arg(args, unsigned int);
+	str = DectoBase(x, 10, 0);
+
+	return (_puts(str));
+}
+
+/**
  * print_number - loops through an integer and prints its digits
  * @n: integer to print
  */

@@ -4,15 +4,20 @@
  * DectoBase - converts numbers from base 10 to any base
  * @n: number to convert
  * @base: base to convert to
+ * @Lwr: flag to specify conversion to lowercase hexdecimal
  * Return: pointer to string of converted number
  */
 
-char *DectoBase(unsigned int n, int base)
+char *DectoBase(unsigned int n, int base, int Lwr)
 {
 	static char buff[50];
 	char *ptr;
 
-	static char Rep[] = "0123456789ABDEF";
+	static char *Rep;
+
+	Rep = (Lwr)
+		? "0123456789abcdef"
+		: "0123456789ABCDEF";
 
 	ptr = &buff[49];
 	*ptr = '\0';

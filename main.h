@@ -28,6 +28,10 @@ int print_int(va_list args);
 void print_number(int n);
 int count_digit(int x);
 int print_binary(va_list args);
-char *DectoBase(unsigned int n, int base);
+char *DectoBase(unsigned int n, int base, int Lwr);
+int print_octal(va_list args);
+int print_hexUpr(va_list args);
+int print_hexLwr(va_list args);
+int print_unsint(va_list args);
 
 #endif
