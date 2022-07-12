@@ -18,7 +18,7 @@ char *DectoBase(unsigned int n, int base)
 	*ptr = '\0';
 
 	do {
-		*--p = Rep[n % base];
+		*--ptr = Rep[n % base];
 		n /= base;
 	} while (n != 0);
 
