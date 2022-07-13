@@ -8,7 +8,7 @@
  * Return: pointer to string of converted number
  */
 
-char *DectoBase(unsigned int n, int base, int Lwr)
+char *DectoBase(unsigned long int n, int base, int Lwr)
 {
 	static char buff[50];
 	char *ptr;
