@@ -23,10 +23,11 @@ fmt specs[] = {
 {'o', print_octal},
 {'X', print_hexUpr},
 {'x', print_hexLwr},
-{'u', print_unsint}
+{'u', print_unsint},
+{'S', print_bigS}
 };
 
-int ops = 10;
+int ops = 11;
 int i;
 
 for (i = 0; i < ops ; i++)

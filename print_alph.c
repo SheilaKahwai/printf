@@ -43,3 +43,38 @@ int print_percent(__attribute__((unused))va_list args)
 	_putchar('%');
 	return (1);
 }
+
+/**
+ * print_bigS - non-printable chars are printed like this:
+ * \x folled by their hexadecimal value
+ * @args: string to print
+ * Return: no. of characters printed
+ */
+int print_bigS(va_list args)
+{
+	int i, count;
+	char *str;
+	char *c;
+
+	count = 0;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+		return (_puts("(null)"));
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
+		{
+			_puts("\\x");
+			count += 2;
+			c = DectoBase(str[i], 16, 0);
+			if (!c[1])
+				count += _putchar('0');
+			count += _puts(c);
+		}
+		else
+			count += _putchar(str[i]);
+	}
+	return (count);
+}
+		
