@@ -24,10 +24,11 @@ fmt specs[] = {
 {'X', print_hexUpr},
 {'x', print_hexLwr},
 {'u', print_unsint},
-{'S', print_bigS}
+{'S', print_bigS},
+{'p', print_address}
 };
 
-int ops = 11;
+int ops = 12;
 int i;
 
 for (i = 0; i < ops ; i++)

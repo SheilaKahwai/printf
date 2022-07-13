@@ -34,5 +34,6 @@ int print_hexUpr(va_list args);
 int print_hexLwr(va_list args);
 int print_unsint(va_list args);
 int print_bigS(va_list args);
+int print_address(va_list args);
 
 #endif
